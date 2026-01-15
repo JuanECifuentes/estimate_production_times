@@ -74,6 +74,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'production_estimator.wsgi.application'
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = [
+    "https://sooniverse.cloud",
+    "https://www.sooniverse.cloud",
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
